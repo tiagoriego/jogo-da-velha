@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Jogo da Velha</title>
+  <link rel="stylesheet" href="/css/jogo-da-velha.css">
+</head>
+
+<body>
+  <div class="game">
+    <div class="game-scoreboard">
+      <div class="game-scoreboard-player">Placar</div>
+      <div>
+        <div class="game-scoreboard-player">
+          Jogador (<b>X</b>): <span id="jogador-um"></span>
+        </div>
+        <div class="game-scoreboard-player ">
+          Jogador (<b>O</b>): <span id="jogador-dois"></span>
+        </div>
+        <div class="game-scoreboard-player ">
+          Rodada: <span id="rodada"></span>
+        </div>
+      </div>
+    </div>
+    <div class="game-player">
+
+      <div class="rows">
+        <div class="rows">
+          <div class="player player-line-right player-line-bottom cols" id="jogada-0">
+          </div>
+          <div class="player player-line-right player-line-bottom cols" id="jogada-1">
+          </div>
+          <div class="player player-line-bottom cols" id="jogada-2">
+          </div>
+        </div>
+        <div class="rows">
+          <div class="player player-line-right cols" id="jogada-3">
+          </div>
+          <div class="player player-line-right cols" id="jogada-4">
+          </div>
+          <div class="player cols" id="jogada-5">
+          </div>
+        </div>
+        <div class="rows">
+          <div class="player player-line-right player-line-top cols" id="jogada-6">
+          </div>
+          <div class="player player-line-right player-line-top cols" id="jogada-7">
+          </div>
+          <div class="player player-line-top cols" id="jogada-8">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/jogo-da-velha.js"></script>
+  <script src="js/jogo-da-velha-tela.js"></script>
+</body>
+
+</html>

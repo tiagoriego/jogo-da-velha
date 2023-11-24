@@ -1,0 +1,14 @@
+{
+  "name": "jogo-da-velha",
+  "version": "1.0.0",
+  "description": "Aulas JavaScript - Prof. Tiago Riego",
+  "main": "index.html",
+  "scripts": {
+    "start": "light-server -s src -p 8080 -w \"src/**/*.js, src/**/*.css, src/**/*.html\""
+  },
+  "author": "Prof. Tiago Riego",
+  "license": "MIT",
+  "devDependencies": {
+    "light-server": "^2.9.1"
+  }
+}
