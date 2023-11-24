@@ -3,6 +3,8 @@
 ## Regra do jogo
 O "jogo da velha" acontece em um tabuleiro na forma de uma grade 3×3; de 9 de casas vazias; dois jogadores se revezam marcando nas casas vazias, o primeiro jogador marca os xis (X) e o segundo os círculos (o); se um jogador fizer três marcas iguais em uma fileira (horizontal/vertical ou diagonal), ele ganha. Se todas as lacunas forem preenchidas e não houver um vencedor, o jogo termina em empate.
 
+[Quero jogar!](https://tiagoriego.github.io/jogo-da-velha/src/)
+
 ![Jogo](/screencast.png)
 
 ## Exemplo de Uso da Class JogoDaVelha
