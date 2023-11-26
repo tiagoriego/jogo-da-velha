@@ -29,15 +29,6 @@ const JogoDaVelha = function () {
     return jogada;
   }
 
-  // reinicia o jogo
-  function reiniciarJogo() {
-    jogo.forEach((_, i) => {
-      jogo[i] = null;
-    });
-    vencedor = null;
-    rodada++;
-  }
-
   this.jogar = function (posicao) {
     // valida a posicao da jogada
     if (posicao < 0 || posicao > jogo.length) return;
@@ -73,7 +64,11 @@ const JogoDaVelha = function () {
   };
 
   this.reiniciarJogo = function () {
-    reiniciarJogo();
+    jogo.forEach((_, i) => {
+      jogo[i] = null;
+    });
+    vencedor = null;
+    rodada++;
   };
 
   this.obterJogador = function () {
