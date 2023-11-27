@@ -1,4 +1,4 @@
-const JogoDaVelha = function () {
+function JogoDaVelha() {
   const jogador = {
     um: {
       jogador: 'x',
@@ -82,4 +82,6 @@ const JogoDaVelha = function () {
   this.haVencedor = function () {
     return vencedor ? true : false;
   };
+
+  return this;
 };
