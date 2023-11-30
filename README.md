@@ -13,6 +13,7 @@ O "jogo da velha" acontece em um tabuleiro na forma de uma grade 3×3; de 9 de c
 const jogo = new JogoDaVelha();
 jogo.jogar(0);
 console.log('jogador', jogo.obterJogador());
+console.log('proximo jogador', jogo.obterProximoJogador());
 // jogada
 jogo.jogar(3);
 console.log('jogador', jogo.obterJogador());

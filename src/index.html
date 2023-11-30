@@ -10,17 +10,19 @@
 <body>
   <div class="game">
     <div class="game-scoreboard">
-      <div class="game-scoreboard-player">Placar</div>
-      <div>
-        <div class="game-scoreboard-player">
-          Jogador (<b>X</b>): <span id="jogador-um"></span>
+      <div class="game-scoreboard-title">Placar</div>
+      <div class="game-scoreboard-box">
+        <div class="game-scoreboard-player" id="placar-um">
+          <div class="player-left">X</div>
+          <div class="player-right"><span id="jogador-um">-</span></div>
         </div>
-        <div class="game-scoreboard-player ">
-          Jogador (<b>O</b>): <span id="jogador-dois"></span>
+        <div class="game-scoreboard-player" id="placar-dois">
+          <div class="player-left">O</div>
+          <div class="player-right"><span id="jogador-dois">-</span></div>
         </div>
-        <div class="game-scoreboard-player ">
-          Rodada: <span id="rodada"></span>
-        </div>
+      </div>
+      <div class="game-scoreboard-round">
+        Sua vez <span id="jogando"></span> | Rodada <span id="rodada"></span>
       </div>
     </div>
     <div class="game-player">

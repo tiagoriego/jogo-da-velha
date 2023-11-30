@@ -70,11 +70,53 @@ body {
   margin-bottom: 30px;
 }
 
+.game-scoreboard-box {
+  margin-left: 305px;
+}
+
 .game-scoreboard-player {
-  padding: 5px;
+  width: 200px;
+  border: 1px solid green;
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-block;
   text-align: center;
+  border-radius: 5px;
+}
+
+.player-left, .player-right {
+  padding: 10px;
+}
+
+.player-left {
+  float: left;
+}
+
+.player-right {
+  float: right;
 }
 
 .game-scoreboard-player span {
   font-weight: bold;
+}
+
+.game-scoreboard-round, .game-scoreboard-title {
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.game-scoreboard-title {
+  border-bottom: 1px solid;
+  margin-bottom: 18px;
+}
+
+.game-scoreboard-round {
+  border-top: 1px solid green;
+  margin-top: 8px;
+}
+
+.next-player {
+  background-color: green;
+  color: #000;
 }

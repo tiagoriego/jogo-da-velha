@@ -1,11 +1,11 @@
 function JogoDaVelha() {
   const jogador = {
     um: {
-      jogador: 'x',
+      jogador: "x",
       pontuacao: 0,
     },
     dois: {
-      jogador: 'o',
+      jogador: "o",
       pontuacao: 0,
     },
   };
@@ -83,5 +83,15 @@ function JogoDaVelha() {
     return vencedor ? true : false;
   };
 
+  this.obterProximoJogador = function () {
+    let proximo = this.obterJogador();
+    let jogada = proximo
+      ? proximo.jogador == "x"
+        ? jogador.dois
+        : jogador.um
+      : jogador.um;
+    return jogada;
+  };
+
   return this;
-};
+}
