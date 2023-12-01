@@ -10,7 +10,12 @@
 <body>
   <div class="game">
     <div class="game-scoreboard">
-      <div class="game-scoreboard-title">Placar</div>
+      <div class="game-scoreboard-title">
+        <select name="jogo" id="jogo" class="game-options">
+          <option value="0">Maquina</option>
+          <option value="1" selected>Jogar com um amigo</option>
+        </select>
+      </div>
       <div class="game-scoreboard-box">
         <div class="game-scoreboard-player" id="placar-um">
           <div class="player-left">X</div>
@@ -57,7 +62,9 @@
   </div>
 
   <script src="js/jogo-da-velha.js"></script>
+  <script src="js/jogo-da-velha-maquina.js"></script>
   <script src="js/jogo-da-velha-tela.js"></script>
+
 </body>
 
 </html>
