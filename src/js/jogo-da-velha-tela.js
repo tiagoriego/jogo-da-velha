@@ -1,20 +1,29 @@
 (function () {
   let jogoDaVelha = new JogoDaVelha();
-  let jogarComMaquina = false;
+  let jogarComMaquina = true;
   const jogoDaVelhaMaquina = new JogoDaVelhaMaquina();
   const jogada = document.querySelectorAll("[id*=jogada-]");
   const jogador = document.querySelectorAll("[id*=jogador-]");
   const rodada = document.querySelector("[id=rodada]");
   const jogando = document.querySelector("[id=jogando");
   const placar = document.querySelectorAll("[id*=placar-]");
-  const opcaoDeJogada = document.querySelector('[id=jogo]');
 
   atualizarRodada();
   atualizarProximoJogador();
 
-  opcaoDeJogada.addEventListener('click', (e) => {
-    selecionarOpcao(e);
+  document.querySelector("[id=menu]").addEventListener("click", function () {
+    const menuItem = document.querySelector("[id=menu-item]");
+    let menuState = menuItem.style.display;
+    menuState = menuState == "block" ? "none" : "block";
+    menuItem.style.display = menuState;
   });
+
+  document
+    .querySelector("[id=menu-item]")
+    .addEventListener("click", function (e) {
+      selecionarOpcao(e.target.getAttribute("option"));
+      this.style.display = "none";
+    });
 
   jogada.forEach((el, i) => {
     el.addEventListener("click", () => {
@@ -22,13 +31,13 @@
     });
   });
 
-  function selecionarOpcao(e) {
-    jogarComMaquina = e.target.value == "0" ? true : false;
+  function selecionarOpcao(option) {
+    jogarComMaquina = option == "0" ? true : false;
     reiniciarJogo();
     jogoDaVelha = new JogoDaVelha();
-    jogador[0].textContent = '-';
-    jogador[1].textContent = '-';
-    rodada.textContent = '1';
+    jogador[0].textContent = "-";
+    jogador[1].textContent = "-";
+    rodada.textContent = "1";
     atualizarProximoJogador();
   }
 
@@ -78,7 +87,7 @@
       if (el.firstElementChild) {
         el.removeChild(el.firstElementChild);
       }
-    });   
+    });
   }
 
   function atualizarRodada() {

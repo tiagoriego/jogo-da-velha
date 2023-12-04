@@ -3,61 +3,44 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Jogo da Velha</title>
   <link rel="stylesheet" href="css/jogo-da-velha.css">
 </head>
 
 <body>
   <div class="game">
-    <div class="game-scoreboard">
-      <div class="game-scoreboard-title">
-        <select name="jogo" id="jogo" class="game-options">
-          <option value="0">Maquina</option>
-          <option value="1" selected>Jogar com um amigo</option>
-        </select>
+    <div class="menu" id="menu">
+      MENU
+    </div>
+    <div class="menu-item" id="menu-item">
+      <div option="0">Maquina</div>
+      <div option="1">Jogar com um amigo</div>
+    </div>
+    <div class="game-scoreboard-box">
+      <div class="game-scoreboard-player" id="placar-um">
+        <div class="player-left">X</div>
+        <div class="player-right"><span id="jogador-um">-</span></div>
       </div>
-      <div class="game-scoreboard-box">
-        <div class="game-scoreboard-player" id="placar-um">
-          <div class="player-left">X</div>
-          <div class="player-right"><span id="jogador-um">-</span></div>
-        </div>
-        <div class="game-scoreboard-player" id="placar-dois">
-          <div class="player-left">O</div>
-          <div class="player-right"><span id="jogador-dois">-</span></div>
-        </div>
-      </div>
-      <div class="game-scoreboard-round">
-        Sua vez <span id="jogando"></span> | Rodada <span id="rodada"></span>
+      <div class="game-scoreboard-player" id="placar-dois">
+        <div class="player-left">O</div>
+        <div class="player-right"><span id="jogador-dois">-</span></div>
       </div>
     </div>
-    <div class="game-player">
-
-      <div class="rows">
-        <div class="rows">
-          <div class="player player-line-right player-line-bottom cols" id="jogada-0">
-          </div>
-          <div class="player player-line-right player-line-bottom cols" id="jogada-1">
-          </div>
-          <div class="player player-line-bottom cols" id="jogada-2">
-          </div>
-        </div>
-        <div class="rows">
-          <div class="player player-line-right cols" id="jogada-3">
-          </div>
-          <div class="player player-line-right cols" id="jogada-4">
-          </div>
-          <div class="player cols" id="jogada-5">
-          </div>
-        </div>
-        <div class="rows">
-          <div class="player player-line-right player-line-top cols" id="jogada-6">
-          </div>
-          <div class="player player-line-right player-line-top cols" id="jogada-7">
-          </div>
-          <div class="player player-line-top cols" id="jogada-8">
-          </div>
-        </div>
-      </div>
+    <div class="game-scoreboard-round">
+      Sua vez <span id="jogando"></span> | Rodada <span id="rodada"></span>
+      <input type="hidden" name="" id="jogo">
+    </div>
+    <div class="grid-container">
+      <div class="grid-item player player-line-right player-line-bottom" id="jogada-0"></div>
+      <div class="grid-item player player-line-right player-line-bottom" id="jogada-1"></div>
+      <div class="grid-item player player-line-bottom" id="jogada-2"></div>
+      <div class="grid-item player player-line-right" id="jogada-3"></div>
+      <div class="grid-item player player-line-right" id="jogada-4"></div>
+      <div class="grid-item player" id="jogada-5"></div>
+      <div class="grid-item player player-line-right player-line-top" id="jogada-6"></div>
+      <div class="grid-item player player-line-right player-line-top" id="jogada-7"></div>
+      <div class="grid-item player player-line-top" id="jogada-8"></div>
     </div>
   </div>
 
@@ -66,5 +49,4 @@
   <script src="js/jogo-da-velha-tela.js"></script>
 
 </body>
-
 </html>

@@ -1,52 +1,52 @@
 body {
-  margin: 0px;
-  padding: 0px;
   background-color: #000;
+  color: green;
+  font-family: 'Courier New', Courier, monospace;
 }
 
-.game {
-  width: 1024px;
-  height: 850px;
-  border: 1px solid green;
-  margin-top: 30px;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 5px;
+@media only screen and (min-width: 768px) {
+  .game {
+    border: 1px solid green;
+    border-radius: 5px;
+    padding: 10px;
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
-.rows {
-  display: block;
+@media only screen and (min-width: 600px) {
+  .game {
+    border: 1px solid green;
+    border-radius: 5px;
+    padding: 10px;
+  }
 }
 
-.cols {
-  display: block;
-  float: left;
+@media only screen and (max-width: 600px) {
+  .game {
+    border: 1px solid green;
+    border-radius: 5px;
+    padding: 10px;
+  }
 }
 
-.game-player {
-  width: 800px;
-  height: 600px;
-  margin-left: auto;
-  margin-right: auto;
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.grid-item {
+  text-align: center;
 }
 
 .player {
-  width: 260px;
-  height: 200px;
   cursor: pointer;
-  padding: 0px;
-  margin: 0px;
-  text-align: center;
-  position: relative;
+  height: 80px;
 }
 
 .player span {
-  position: absolute;
-  top: 35%;
-  left: 50%;
-  font-size: 5em;
-  color: green;
-  margin: -25px 0 0 -25px;
+  font-size: 4rem;
 }
 
 .player-line-top {
@@ -61,21 +61,15 @@ body {
   border-bottom: 2px solid green;
 }
 
-.game-scoreboard {
-  color: green;
-  font-size: 2em;
-  display: inline-block;
-  border-bottom: 1px solid green;
-  width: 1024px;
-  margin-bottom: 30px;
-}
-
 .game-scoreboard-box {
-  margin-left: 305px;
+  width: 290px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 2rem;
 }
 
 .game-scoreboard-player {
-  width: 200px;
+  width: 130px;
   border: 1px solid green;
   margin-left: auto;
   margin-right: auto;
@@ -84,7 +78,8 @@ body {
   border-radius: 5px;
 }
 
-.player-left, .player-right {
+.player-left,
+.player-right {
   padding: 10px;
 }
 
@@ -100,20 +95,11 @@ body {
   font-weight: bold;
 }
 
-.game-scoreboard-round, .game-scoreboard-title {
+.game-scoreboard-round {
   text-align: center;
   padding-top: 5px;
   padding-bottom: 5px;
-}
-
-.game-scoreboard-title {
-  border-bottom: 1px solid;
-  margin-bottom: 18px;
-}
-
-.game-scoreboard-round {
-  border-top: 1px solid green;
-  margin-top: 8px;
+  font-size: 1rem;
 }
 
 .next-player {
@@ -121,15 +107,22 @@ body {
   color: #000;
 }
 
-.winner {
-  background-color: #1e1e1e;
+.menu {
+  font-size: 2rem;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 5px;
 }
 
-.game-options {
-  font-weight: bold;
-  font-size: 0.8em;
-  padding: 5px;
-  background-color: #000;
+.menu-item {
+  display: none;
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+
+.menu-item div {
+  padding: 10px;
   border: 1px solid green;
-  color: green;
+  cursor: pointer;
+  margin-bottom: 5px;
 }
