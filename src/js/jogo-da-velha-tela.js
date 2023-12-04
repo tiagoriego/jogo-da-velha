@@ -7,6 +7,7 @@
   const rodada = document.querySelector("[id=rodada]");
   const jogando = document.querySelector("[id=jogando");
   const placar = document.querySelectorAll("[id*=placar-]");
+  const reiniciar = document.querySelector("[id=reiniciar]");
 
   atualizarRodada();
   atualizarProximoJogador();
@@ -31,8 +32,17 @@
     });
   });
 
+  reiniciar.addEventListener("click", function () {
+    this.style.display = "none";
+    removerGanhador();
+    reiniciarJogo();
+    atualizarRodada();
+  });
+
   function selecionarOpcao(option) {
     jogarComMaquina = option == "0" ? true : false;
+    ocultarReiniciar();
+    removerGanhador();
     reiniciarJogo();
     jogoDaVelha = new JogoDaVelha();
     jogador[0].textContent = "-";
@@ -68,17 +78,37 @@
       } else if (vencedor.jogador == "o") {
         jogador[1].textContent = vencedor.pontuacao;
       }
-      reiniciarJogo();
-      atualizarRodada();
+      marcarGanhador();
+      exibirReiniciar();
     } else {
       const reiniciar = jogo.map((item) => item != null).includes(false);
       if (!reiniciar) {
-        reiniciarJogo();
-        atualizarRodada();
+        exibirReiniciar();
       }
     }
 
     atualizarProximoJogador();
+  }
+
+  function marcarGanhador() {
+    const posicaoVencedor = jogoDaVelha.obterPosicaoJogadaVencedor();
+    posicaoVencedor.forEach((posicao) => {
+      jogada[posicao].classList.add("winner");
+    });
+  }
+
+  function exibirReiniciar() {
+    reiniciar.style.display = "block";
+  }
+
+  function ocultarReiniciar() {
+    reiniciar.style.display = "none";
+  }
+
+  function removerGanhador() {
+    jogada.forEach((el) => {
+      el.classList.remove("winner");
+    });
   }
 
   function reiniciarJogo() {

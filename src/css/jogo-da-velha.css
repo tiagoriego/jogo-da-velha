@@ -126,3 +126,19 @@ body {
   cursor: pointer;
   margin-bottom: 5px;
 }
+
+.winner {
+  background-color: #4f834f;
+  color: #000;
+}
+
+.game-winner {
+  border: 1px solid green;
+  margin-top: 25px;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.4rem;
+  cursor: pointer;
+  border-radius: 5px;
+  display: none;
+}
