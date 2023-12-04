@@ -11,6 +11,7 @@ O "jogo da velha" acontece em um tabuleiro na forma de uma grade 3×3; de 9 de c
 
 ```javascript
 const jogo = new JogoDaVelha();
+const maquina = new JogoDaVelhaMaquina();
 jogo.jogar(0);
 console.log('jogador', jogo.obterJogador());
 console.log('proximo jogador', jogo.obterProximoJogador());
@@ -32,6 +33,17 @@ console.log('placar', jogo.obterPlacar());
 console.log('vencedor', jogo.obterVencedor(), jogo.haVencedor());
 
 jogo.reiniciarJogo();
+
+// jogando com a maquina
+jogo.jogar(1);
+console.log('jogador', jogo.obterJogador());
+console.log('proximo jogador', jogo.obterProximoJogador());
+// jogada da maquina
+let jogada = maquina.obterJogada(
+    jogo.obterJogo(),
+    jogo.obterProximoJogador()
+);
+jogo.jogar(jogada.posicao);
 ```
 
 ## Rodando em ambiente
@@ -59,6 +71,14 @@ Aguardar a instalação dos pacotes.
 ```
 yarn start
 ```
+
+### Build
+
+```
+yarn build
+```
+
+Publicar o conteúdo do diretório `./dist`
 
 ### Browser
 
